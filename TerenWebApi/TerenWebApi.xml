@@ -1,0 +1,266 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TerenWebApi</name>
+    </assembly>
+    <members>
+        <member name="M:TerenWebApi.Controllers.AuthController.#ctor(TerenWebApi.Models.ConnectionStrings,TerenWebApi.Models.JWTConfiguration)">
+            <summary>
+            Konstruktor
+            </summary>
+            <param name="c">Connection string</param>
+            <param name="configuration">Model konfiguracji</param>
+        </member>
+        <member name="M:TerenWebApi.Controllers.AuthController.GenerateToken(TerenWebApi.ViewModels.AccessVM)">
+            <summary>
+            Generuje token JWT
+            </summary>
+            <param name="access">Dane dostępowe</param>
+            <returns>Token JWT</returns>
+        </member>
+        <member name="M:TerenWebApi.Controllers.RoadController.GetRoadList">
+            <summary>
+            Zwraca listę tras. Wymaga autoryzacji.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:TerenWebApi.Enums.Enums">
+            <summary>
+            Klasa reprezentująca typu wyliczalne
+            </summary>
+        </member>
+        <member name="T:TerenWebApi.Enums.Enums.ActionCode">
+            <summary>
+            Kody akcji
+            </summary>
+        </member>
+        <member name="F:TerenWebApi.Enums.Enums.ActionCode.None">
+            <summary>
+            Brak
+            </summary>
+        </member>
+        <member name="F:TerenWebApi.Enums.Enums.ActionCode.SignIn">
+            <summary>
+            Zalogowanie
+            </summary>
+        </member>
+        <member name="F:TerenWebApi.Enums.Enums.ActionCode.LoadCases">
+            <summary>
+            Załadowanie spraw
+            </summary>
+        </member>
+        <member name="F:TerenWebApi.Enums.Enums.ActionCode.CheckIn">
+            <summary>
+            Zameldowanie pod adresem
+            </summary>
+        </member>
+        <member name="F:TerenWebApi.Enums.Enums.ActionCode.SendReport">
+            <summary>
+            Wysyłka raportu
+            </summary>
+        </member>
+        <member name="F:TerenWebApi.Enums.Enums.ActionCode.Logout">
+            <summary>
+            Wylogowanie z aplikacji
+            </summary>
+        </member>
+        <member name="T:TerenWebApi.Models.AccessToken">
+            <summary>
+            Model Tokenu dostępowego (JWT)
+            </summary>
+        </member>
+        <member name="P:TerenWebApi.Models.AccessToken.ExpireOnDate">
+            <summary>
+            Data wygaśnięcia
+            </summary>
+        </member>
+        <member name="P:TerenWebApi.Models.AccessToken.ExpiryIn">
+            <summary>
+            Wygaśnie za
+            </summary>
+        </member>
+        <member name="P:TerenWebApi.Models.AccessToken.Token">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="P:TerenWebApi.Models.AccessToken.Success">
+            <summary>
+            Czy sukces?
+            </summary>
+        </member>
+        <member name="T:TerenWebApi.Models.ActionLog">
+            <summary>
+            Obsługa logowania
+            </summary>
+        </member>
+        <member name="T:TerenWebApi.Models.ConnectionStrings">
+            <summary>
+            Model ConnectionString
+            </summary>
+        </member>
+        <member name="P:TerenWebApi.Models.ConnectionStrings.TST">
+            <summary>
+            Mssql
+            </summary>
+        </member>
+        <member name="P:TerenWebApi.Models.JWTConfiguration.SecretKey">
+            <summary>
+            SecretKey
+            </summary>
+        </member>
+        <member name="P:TerenWebApi.Models.JWTConfiguration.ValidIssuer">
+            <summary>
+            ValidIssuer
+            </summary>
+        </member>
+        <member name="P:TerenWebApi.Models.JWTConfiguration.ValidAudience">
+            <summary>
+            ValidAudience
+            </summary>
+        </member>
+        <member name="P:TerenWebApi.Models.JWTConfiguration.TokenExpirationTime">
+            <summary>
+            TokenExpirationTime
+            </summary>
+        </member>
+        <member name="F:TerenWebApi.Models.Log.StackTrace">
+            <summary>
+            Exception
+            </summary>
+        </member>
+        <member name="F:TerenWebApi.Models.Log.AdditionalInfo">
+            <summary>
+            Dodatkowe informacje
+            </summary>
+        </member>
+        <member name="F:TerenWebApi.Models.Log.UserId">
+            <summary>
+            Dodatkowe informacje
+            </summary>
+        </member>
+        <member name="M:TerenWebApi.Models.Log.#ctor(TerenWebApi.Models.ConnectionStrings,System.Exception,System.String,System.Int32)">
+            <summary>
+            Konstruktor
+            </summary>
+            <param name="ex"></param>
+            <param name="addInfo"></param>
+        </member>
+        <member name="M:TerenWebApi.Models.Log.Send">
+            <summary>
+            Dodaj wpis do DB
+            </summary>
+        </member>
+        <member name="T:TerenWebApi.Models.User">
+            <summary>
+            Model użytkowników
+            </summary>
+        </member>
+        <member name="P:TerenWebApi.Models.User.Id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:TerenWebApi.Models.User.Name">
+            <summary>
+            Nazwa
+            </summary>
+        </member>
+        <member name="P:TerenWebApi.Models.User.Surname">
+            <summary>
+            Nazwa
+            </summary>
+        </member>
+        <member name="P:TerenWebApi.Models.User.Login">
+            <summary>
+            Login
+            </summary>
+        </member>
+        <member name="T:TerenWebApi.Sql">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:TerenWebApi.Sql.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:TerenWebApi.Sql.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:TerenWebApi.Sql.AddErrorLog">
+             <summary>
+               Looks up a localized string similar to INSERT INTO nteren_error_log
+            (tl_data, 
+             tl_dodatkoweInformacje, 
+             tl_stacktrace, 
+             tl_tt_id
+            )
+            VALUES
+            (GETDATE(), 
+             @AdditionalInfo, 
+             @StackTrace, 
+             @UserId
+            );.
+             </summary>
+        </member>
+        <member name="P:TerenWebApi.Sql.AddJwt">
+             <summary>
+               Looks up a localized string similar to INSERT INTO [dm_data_gci].[dbo].nteren_jwt
+            (tj_tt_id, 
+             tj_token, 
+             tj_data_od, 
+             tj_data_do
+            )
+            VALUES
+            (@UserId, 
+             @Token, 
+             GETDATE(), 
+             @ExpirationDate
+            );.
+             </summary>
+        </member>
+        <member name="P:TerenWebApi.Sql.GetUserByIndentity">
+             <summary>
+               Looks up a localized string similar to SELECT tt_id AS Id, 
+                   tt_imie AS Name, 
+                   tt_nazwisko AS Surname, 
+                   tt_login AS Login
+            FROM nteren_terenowi
+                 JOIN nteren_terenowy_urzadzenie ON ttu_tt_id = tt_id
+                                                    AND ttu_data_do &gt; GETDATE()
+                 JOIN nteren_urzadzenia ON tu_id = ttu_tu_id
+                                           AND tu_imei = @Imei
+                                           AND tu_sn = @Sn
+                                           AND tu_czy_aktywny = 1
+            WHERE tt_login = @Login
+                  AND tt_pin = @Pin
+             [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:TerenWebApi.ViewModels.AccessVM.Login">
+            <summary>
+            Login
+            </summary>
+        </member>
+        <member name="P:TerenWebApi.ViewModels.AccessVM.Pin">
+            <summary>
+            Hasło
+            </summary>
+        </member>
+        <member name="P:TerenWebApi.ViewModels.AccessVM.Imei">
+            <summary>
+            Imei urządzenia
+            </summary>
+        </member>
+        <member name="P:TerenWebApi.ViewModels.AccessVM.Sn">
+            <summary>
+            SerialNumber urządzenia
+            </summary>
+        </member>
+    </members>
+</doc>
